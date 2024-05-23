@@ -1,9 +1,10 @@
 import React from 'react';
 import MovieItem from './MovieItem';
+import '../styles/main.css';
 
 const MovieList = ({ movies, toggleLike, removeMovie }) => {
   return (
-    <ul>
+    <div className="movie-grid">
       {movies.map((movie, index) => (
         <MovieItem
           key={index}
@@ -12,7 +13,7 @@ const MovieList = ({ movies, toggleLike, removeMovie }) => {
           removeMovie={() => removeMovie(index)}
         />
       ))}
-    </ul>
+    </div>
   );
 };
 
