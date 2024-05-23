@@ -1,0 +1,105 @@
+/* Add styles for header buttons */
+header button {
+  font-size: 14px;
+  padding: 0.5em 1em;
+  margin-left: 1em;
+}
+
+form input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Light gray background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+form input[type="text"]:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form button {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.7em;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff; /* Blue button background */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add styles for movie item buttons */
+li button {
+  font-size: 16px;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+li button:hover {
+  color: #333;
+}
+
+/* Add styles for like button */
+li button.like-button {
+  margin-right: 0.5em;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+li img {
+  width: 200px; /* Set the fixed width */
+  height: 350px; /* Set the fixed height */
+  margin-right: 1em;
+}
+
+li div {
+  flex-grow: 1;
+}
+
+/* Additional style for filter input */
+header input[type="text"] {
+  width: auto;
+  padding: 0.7em;
+  margin-left: 1em;
+  border-radius: 10px;
+  background-color: #f5f5f5; /* Light gray background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style for switch to dark mode button */
+header .dark-mode-button {
+  font-size: 14px;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #333; /* Dark background for dark mode button */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+header .dark-mode-button:hover {
+  background-color: #555; /* Darker background on hover */
+}

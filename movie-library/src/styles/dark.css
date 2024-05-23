@@ -1,0 +1,26 @@
+body.dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+header.dark {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+body.dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+header.dark {
+  background-color: #444;
+  color: #f4f4f4;
+}
+
+/* Add styles for dark mode */
+body.dark,
+header.dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
