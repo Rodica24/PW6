@@ -12,26 +12,21 @@ const App = () => {
   const [genreFilter, setGenreFilter] = useState('');
 
   useEffect(() => {
+    // Load movies and favorite titles from local storage
     const savedMovies = JSON.parse(localStorage.getItem('movies'));
     if (savedMovies) {
       setMovies(savedMovies);
-      const favoriteTitles = savedMovies.filter(movie => movie.liked).map(movie => movie.title);
-      setFavoriteTitles(favoriteTitles);
-    } else {
-      setMovies([]);
-    }
-
-    const savedFavoriteTitles = JSON.parse(localStorage.getItem('favoriteTitles'));
-    if (savedFavoriteTitles) {
+      const savedFavoriteTitles = savedMovies.filter(movie => movie.liked).map(movie => movie.title);
       setFavoriteTitles(savedFavoriteTitles);
-    } else {
-      setFavoriteTitles([]);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('favoriteTitles', JSON.stringify(favoriteTitles));
-  }, [favoriteTitles]);
+    // Save movies to local storage whenever movies state changes
+    localStorage.setItem('movies', JSON.stringify(movies));
+    const newFavoriteTitles = movies.filter(movie => movie.liked).map(movie => movie.title);
+    setFavoriteTitles(newFavoriteTitles);
+  }, [movies]);
 
   const addMovie = (movie) => {
     setMovies([...movies, movie]);
@@ -41,15 +36,11 @@ const App = () => {
     const newMovies = [...movies];
     newMovies[index].liked = !newMovies[index].liked;
     setMovies(newMovies);
-    const favoriteTitles = newMovies.filter(movie => movie.liked).map(movie => movie.title);
-    setFavoriteTitles(favoriteTitles);
   };
 
   const removeMovie = (index) => {
     const newMovies = movies.filter((_, i) => i !== index);
     setMovies(newMovies);
-    const favoriteTitles = newMovies.filter(movie => movie.liked).map(movie => movie.title);
-    setFavoriteTitles(favoriteTitles);
   };
 
   const toggleDarkMode = () => {
