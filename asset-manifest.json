@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Rodica24/PW6/static/css/main.ed157efe.css",
+    "main.js": "/Rodica24/PW6/static/js/main.48829e55.js",
+    "static/js/453.7e493ed7.chunk.js": "/Rodica24/PW6/static/js/453.7e493ed7.chunk.js",
+    "index.html": "/Rodica24/PW6/index.html",
+    "main.ed157efe.css.map": "/Rodica24/PW6/static/css/main.ed157efe.css.map",
+    "main.48829e55.js.map": "/Rodica24/PW6/static/js/main.48829e55.js.map",
+    "453.7e493ed7.chunk.js.map": "/Rodica24/PW6/static/js/453.7e493ed7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed157efe.css",
+    "static/js/main.48829e55.js"
+  ]
+}
